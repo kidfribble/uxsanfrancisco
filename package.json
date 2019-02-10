@@ -6,15 +6,15 @@
     "start": "node ./bin/www"
   },
   "dependencies": {
-    "body-parser": "^1.18.0",
+    "body-parser": "^1.18.3",
     "cookie-parser": "^1.4.0",
-    "debug": "^3.1.0",
+    "debug": "^3.2.6",
     "dotenv": "^4.0.0",
-    "express": "^4.13.0",
+    "express": "^4.16.4",
     "i18n": "^0.8.3",
     "jade": "^1.11.0",
-    "morgan": "^1.6.0",
-    "request": "^2.62.0",
-    "serve-favicon": "^2.3.0"
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
+    "serve-favicon": "^2.5.0"
   }
 }
