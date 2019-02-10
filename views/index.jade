@@ -1,0 +1,53 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/main.css')
+    title UX San Francisco
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-74467309-3')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-74467309-3');
+
+  body
+    header
+      a.logo-container(href='/')
+        img.logo(src='images/ux_sf.svg', alt='UX San Francisco')
+      ul.nav
+        li
+          a(href='/code-of-conduct') Code of Conduct
+        li
+          a(href='https://twitter.com/uxsanfrancisco') @uxsanfrancisco
+    section
+      .title
+        h1 Workshops, talks, and networking events in the San Francisco area.
+        a.cta-purple.button(href='https://www.meetup.com/uxsanfrancisco/') Join the Meetup
+        //- a.cta-magenta.button(href='/join') Join the Slack Community
+      .form-container
+        label(for='email') Join the newsletter for San Francisco area design news!
+        // Begin MailChimp Signup Form
+        #mc_embed_signup
+          form#mc-embedded-subscribe-form.validate(action='https://makemodel.us6.list-manage.com/subscribe/post?u=b495c4767e56efbcee21079d3&id=975ee39672', method='post', name='mc-embedded-subscribe-form', target='_blank', novalidate='')
+            #mc_embed_signup_scroll
+              input#mce-EMAIL.newsletter.required.email(type='email', value='', name='EMAIL', placeholder='youremail@email.com')
+              input#mc-embedded-subscribe.button.cta-magenta(type='submit', value='Subscribe', name='subscribe')
+            #mce-responses.clear
+              #mce-error-response.response(style='display:none')
+              #mce-success-response.response(style='display:none')
+            // real people should not fill this in and expect good things - do not remove this or risk form bot signups
+            div(style='position: absolute; left: -5000px;', aria-hidden='true')
+              input(type='text', name='b_b495c4767e56efbcee21079d3_975ee39672', tabindex='-1', value='')
+          span We will never send you spam - promise!
+        // End mc_embed_signup
+    footer
+      span
+        | UX San Francisco is organized by 
+        a.magenta(href='https://twitter.com/strevat') Steven Trevathan
+        | , 
+        a.purple(href='https://twitter.com/ohhappydaily') Sarah Wohl
+        |  and sponsored by 
+        a.magenta(href='http://makemodel.co/') make&model

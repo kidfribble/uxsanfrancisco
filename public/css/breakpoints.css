@@ -1,0 +1,48 @@
+@media (max-width: 425px) {
+  body .logo-container {
+    display: block;
+    margin: auto;
+    float: none;
+    width: 80px;
+    height: 80px;
+    text-align: center;
+  }
+  body .logo-container .logo {
+    height: auto;
+    width: 40px;
+    margin: 20px auto 0 auto;
+  }
+  body .nav {
+    float: left;
+    margin: 24px auto 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+
+  body .nav li {
+    margin: 0;
+  }
+
+  body h1 {
+    font-size: 24px;
+  }
+  body .button {
+    display: block;
+    margin: auto auto 12px auto;
+    width: 80%;
+  }
+  body .form-container {
+    padding: 36px;
+  }
+  body .form-container input[type=email] {
+    width: 100%;
+  }
+  body .form-container input[type=submit] {
+    margin: auto auto 12px auto;
+    text-align: center;
+    width: 100%;
+  }
+  body .form-container span {
+    line-height: 18px;
+  }
+}

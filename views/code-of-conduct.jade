@@ -1,0 +1,70 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/main.css')
+    title UX San Francisco
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-74467309-3')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-74467309-3');
+
+  body
+    header
+      a.logo-container(href='/')
+        img.logo(src='images/ux_sf.svg', alt='UX San Francisco')
+      ul.nav
+        li
+          a(href='/code-of-conduct') Code of Conduct
+        li
+          a(href='https://twitter.com/uxsanfrancisco') @uxsanfrancisco
+    section.coc-section
+      .coc-title
+        h1 UX San Francisco's Code of Conduct
+      .coc
+        h3 Short version
+        p
+          | UX San Francisco attendees, organizers, and sponsors are required to adhere to our Code of Conduct. We expect cooperation from all participants to ensure a safe environment for everyone.
+        p
+          | If you need help, you can contact the organizer at 
+          a.magenta(href='mailTo:steven@makemodel.co') steven@makemodel.co
+          | .
+        h3 Long version
+        p
+          | UX San Francisco is dedicated to providing a harassment-free experience for everyone, regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age or religion. We do not tolerate harassment of attendees in any form. Attendees violating these rules may be sanctioned or expelled from the event and/or UX San Francisco community at large per the discretion of the organizers.
+        p Harassment includes, but is not limited to:
+        ul
+          li
+            | Any aggressive behavior or commentary related to gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age, or religion.
+          li Sexual images in public spaces
+          li Deliberate intimidation, stalking, or following.
+          li Harassing photography or recording
+          li Inappropriate physical contact
+          li Sustained disruption of talks or other events
+          li Unwelcome sexual attention
+          li Advocating for, or encouraging, any of the above behavior
+        p
+          | If someone makes you or anyone else feel unsafe or unwelcome, please report it as soon as possible. You can make a report at contacting Steven Trevathan at the event or, if you cannot find an event organizer or are not comfortable contacting an event organizer in person, you can alternatively email steven@makemodel.co.
+        h3 Credits
+        p
+          | This Code of Conduct was adapted from 
+          a.purple(href='https://github.com/uxhappyhour-portland/codeofconduct') UX Happy Hour Portland
+          | , which was in turn adapted from the works of 
+          a.magenta(href='http://www.meetup.com/pdxpython/pages/Code_of_Conduct/') PDX Python
+          | , 
+          a.purple(href='https://github.com/WomenWhoCode/guidelines-resources/blob/master/code_of_conduct.md') Women Who Code
+          | , and the example policy set in the 
+          a.magenta(href='http://geekfeminism.wikia.com/wiki/Conference_anti-harassment') Geek Feminism Wiki
+          | .
+    footer
+      span
+        | UX San Francisco is organized by 
+        a.magenta(href='https://twitter.com/strevat') Steven Trevathan
+        | , 
+        a.purple(href='https://twitter.com/ohhappydaily') Sarah Wohl
+        |  and sponsored by 
+        a.magenta(href='http://makemodel.co/') make&model

@@ -1,0 +1,63 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='css/main.css')
+    title UX Berkeley
+    // Global site tag (gtag.js) - Google Analytics
+    script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-74467309-3')
+    script.
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-74467309-3');
+
+  body
+    header
+      a.logo-container(href='/')
+        img.logo(src='images/uxberkeley.svg', alt='UX Berkeley')
+      ul.nav
+        li
+          a(href='/code-of-conduct') Code of Conduct
+        li
+          a(href='https://twitter.com/uxberkeley') @uxburkeley
+    section
+      .title
+        h1 Join the Slack Community
+      .form-container
+        form(method="POST", action="/invite")#join-form.form
+          label(for="email") #{__('ENTER_EMAIL')}
+          input(type="email", name="email", autofocus, placeholder="your@email.com")#slack-email.field
+          if tokenRequired
+            input(type="text", name="token", placeholder="#{__('ENTER_TOKEN')}")#slack-token.field
+          input(type="submit", value="Join", class="cta-magenta button").submit
+          span We will never send you spam - promise!
+          if !!recaptchaSiteKey
+            div(class="g-recaptcha", data-sitekey="#{recaptchaSiteKey}")
+    footer
+      span
+        | UX Berkeley is organized by 
+        a.magenta(href='https://twitter.com/strevat') Steven Trevathan
+        | , 
+        a.purple(href='https://twitter.com/gnomekeeper') Alan Dyck
+        |  and sponsored by 
+        a.magenta(href='http://makemodel.co/') Make&Model
+        |  and 
+        a.purple(href='http://lowfivestudio.com/index.html') Low Five Studio
+
+  if !!recaptchaSiteKey
+     script(src='https://www.google.com/recaptcha/api.js')
+  script.
+    var tokenRequired = #{tokenRequired};
+    var form = document.getElementById('join-form');
+    var email = document.getElementById('slack-email');
+    var token = document.getElementById('slack-token');
+    form.addEventListener('submit', function(evt) {
+      if (!email.value) {
+        evt.preventDefault();
+      }
+      if (tokenRequired && !token.value) {
+        evt.preventDefault();
+      }
+    });
